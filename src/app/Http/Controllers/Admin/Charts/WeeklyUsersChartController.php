@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Charts;
+namespace CMS\Backpack\app\Http\Controllers\Admin\Charts;
 
 use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\ChartController;

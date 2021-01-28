@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Policies;
+namespace CMS\Backpack\app\Policies;
 
 use App\Models\Post;
 use App\Models\User;

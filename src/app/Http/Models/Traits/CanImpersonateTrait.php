@@ -1,4 +1,4 @@
-<?php namespace App\Http\Models\Traits;
+<?php namespace CMS\Backpack\app\Http\Models\Traits;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Request;

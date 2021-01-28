@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace CMS\Backpack\app\Http\Controllers\Admin;
 
 use App\Models\Category;
 use Backpack\CRUD\app\Http\Controllers\CrudController;

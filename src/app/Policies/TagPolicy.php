@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Policies;
+namespace CMS\Backpack\app\Policies;
 
 use App\Models\Tag;
 use App\Models\User;

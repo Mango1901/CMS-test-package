@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace CMS\Backpack\app\Http\Controllers\Admin;
 
 use App\Http\Requests\PostRequest;
 use App\Models\Category;

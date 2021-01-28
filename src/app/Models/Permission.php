@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace CMS\Backpack\app\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Spatie\Permission\Models\Permission as OriginalPermission;
