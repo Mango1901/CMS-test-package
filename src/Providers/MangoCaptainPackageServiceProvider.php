@@ -18,6 +18,7 @@ class MangoCaptainPackageServiceProvider extends ServiceProvider
     /**
      *
      */
+    public $routeFilePath = '/routes/backpack/mangocaptainroute.php';
     public function boot()
     {
         // use the vendor configuration file as fallback
@@ -25,7 +26,6 @@ class MangoCaptainPackageServiceProvider extends ServiceProvider
             __DIR__.'/config/backpack',
             'backpack'
         );
-
         // publish config file
         $this->publishes([__DIR__.'/config' => config_path()], 'config');
 
@@ -36,8 +36,18 @@ class MangoCaptainPackageServiceProvider extends ServiceProvider
         $this->publishes([__DIR__.'/database/migrations' => database_path('migrations')], 'migrations');
 
         $this->publishes([__DIR__."/database/migrations"=> database_path("seeders")],"seeders");
+    }
+    public function setupRoutes(Router $router)
+    {
+        // by default, use the routes file provided in vendor
+        $routeFilePathInUse = __DIR__.$this->routeFilePath;
 
-        $this->publishes([__DIR__."/routes/backpack"=>routes_path("backpack")],"backpack");
+        // but if there's a file with the same name in routes/backpack, use that one
+        if (file_exists(base_path().$this->routeFilePath)) {
+            $routeFilePathInUse = base_path().$this->routeFilePath;
+        }
+
+        $this->loadRoutesFrom($routeFilePathInUse);
     }
     /**
      * Register any package services.
